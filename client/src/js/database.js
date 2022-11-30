@@ -37,8 +37,8 @@ export const putDb = async (content) => {
 export const getDb = async () => {
   try {
     console.log('GET all from the database');
-    const todosDb = await openDB('todos', 1);
-    const tx = todosDb.transaction('todos', 'readonly');
+    const db = await openDB('todos', 1);
+    const tx = db.transaction('todos', 'readonly');
     const store = tx.objectStore('todos');
     const request = store.getAll();
     const result = await request;
