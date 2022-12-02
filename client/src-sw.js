@@ -41,15 +41,4 @@ registerRoute(
     ],
   })
 );
-// registerRoute(
-//   ({ request }) => request.destination === 'pages',
-//   new CacheFirst({
-//     cacheName: 'page-cache',
-//     plugins: [
-//       new CacheableResponsePlugin({
-//         statuses: [0, 200],
-//       }),
-//     ],
-//   })
-// );
 
